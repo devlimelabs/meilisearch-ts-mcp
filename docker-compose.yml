@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  meilisearch:
+    image: getmeili/meilisearch:latest
+    container_name: meilisearch
+    environment:
+      - MEILI_MASTER_KEY=${MEILI_MASTER_KEY:-masterKey}
+      - MEILI_NO_ANALYTICS=true
+      - MEILI_ENV=development
+    ports:
+      - '7700:7700'
+    volumes:
+      - meilisearch_data:/meili_data
+    restart: unless-stopped
+    networks:
+      - meilisearch-network
+
+  meilisearch-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: meilisearch-mcp
+    environment:
+      - MEILISEARCH_HOST=http://meilisearch:7700
+      - MEILISEARCH_API_KEY=${MEILI_MASTER_KEY:-masterKey}
+      - MEILISEARCH_TIMEOUT=5000
+    depends_on:
+      - meilisearch
+    networks:
+      - meilisearch-network
+
+volumes:
+  meilisearch_data:
+    driver: local
+
+networks:
+  meilisearch-network:
+    driver: bridge
