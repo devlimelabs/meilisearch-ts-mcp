@@ -1,5 +1,7 @@
 # Meilisearch MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@devlimelabs/meilisearch-ts-mcp)](https://smithery.ai/server/@devlimelabs/meilisearch-ts-mcp)
+
 A Model Context Protocol (MCP) server implementation for Meilisearch, enabling AI assistants to interact with Meilisearch through a standardized interface.
 
 ## Features
@@ -14,6 +16,15 @@ A Model Context Protocol (MCP) server implementation for Meilisearch, enabling A
 
 ## Installation
 
+### Installing via Smithery
+
+To install Meilisearch MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@devlimelabs/meilisearch-ts-mcp):
+
+```bash
+npx -y @smithery/cli install @devlimelabs/meilisearch-ts-mcp --client claude
+```
+
+### Manual Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/devlimelabs/meilisearch-ts-mcp.git
