@@ -9,8 +9,8 @@ Please be respectful and considerate of others when contributing to this project
 ## Getting Started
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/yourusername/meilisearch-mcp.git`
-3. Navigate to the project directory: `cd meilisearch-mcp`
+2. Clone your fork: `git clone https://github.com/devlimelabs/meilisearch-ts-mcp.git`
+3. Navigate to the project directory: `cd meilisearch-ts-mcp`
 4. Install dependencies: `npm install`
 5. Create a new branch for your feature or bugfix: `git checkout -b feature/your-feature-name`
 

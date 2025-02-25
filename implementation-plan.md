@@ -6,7 +6,7 @@ This document outlines the implementation plan for the Meilisearch MCP Server, w
 ## Project Structure
 
 ```
-meilisearch-mcp/
+meilisearch-ts-mcp/
 ├── src/
 │   ├── index.ts                 # Main entry point
 │   ├── config.ts                # Server configuration

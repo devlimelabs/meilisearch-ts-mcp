@@ -16,8 +16,8 @@ A Model Context Protocol (MCP) server implementation for Meilisearch, enabling A
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/meilisearch-mcp.git
-   cd meilisearch-mcp
+   git clone https://github.com/devlimelabs/meilisearch-ts-mcp.git
+   cd meilisearch-ts-mcp
    ```
 
 2. Install dependencies:
@@ -57,10 +57,10 @@ You can also build and run the Docker image manually:
 
 ```bash
 # Build the Docker image
-docker build -t meilisearch-mcp .
+docker build -t meilisearch-ts-mcp .
 
 # Run the container
-docker run -p 3000:3000 --env-file .env meilisearch-mcp
+docker run -p 3000:3000 --env-file .env meilisearch-ts-mcp
 ```
 
 ## Development Setup
@@ -69,8 +69,8 @@ For developers who want to contribute to the Meilisearch MCP Server, we provide 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/meilisearch-mcp.git
-cd meilisearch-mcp
+git clone https://github.com/devlimelabs-ts-mcp/meilisearch-ts-mcp.git
+cd meilisearch-ts-mcp
 
 # Run the development setup script
 ./scripts/setup-dev.sh
@@ -146,7 +146,7 @@ If you prefer to manually configure Claude for Desktop:
   "mcpServers": {
     "meilisearch": {
       "command": "node",
-      "args": ["/path/to/meilisearch-mcp/dist/index.js"],
+      "args": ["/path/to/meilisearch-ts-mcp/dist/index.js"],
       "env": {
         "MEILISEARCH_HOST": "http://localhost:7700",
         "MEILISEARCH_API_KEY": "your-api-key"
@@ -168,8 +168,8 @@ The Meilisearch MCP Server can also be integrated with [Cursor](https://cursor.c
 
 1. Install and set up the Meilisearch MCP Server:
    ```bash
-   git clone https://github.com/yourusername/meilisearch-mcp.git
-   cd meilisearch-mcp
+   git clone https://github.com/devlimelabs/meilisearch-ts-mcp.git
+   cd meilisearch-ts-mcp
    npm install
    npm run build
    ```
@@ -184,7 +184,7 @@ The Meilisearch MCP Server can also be integrated with [Cursor](https://cursor.c
 4. Select "Connect to a local MCP server" and enter the following details:
    - **Name**: Meilisearch
    - **Command**: node
-   - **Arguments**: /absolute/path/to/meilisearch-mcp/dist/index.js
+   - **Arguments**: /absolute/path/to/meilisearch-ts-mcp/dist/index.js
    - **Environment Variables**: 
      ```
      MEILISEARCH_HOST=http://localhost:7700

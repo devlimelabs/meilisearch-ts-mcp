@@ -1,7 +1,7 @@
 # Project Directory Structure
 
 ```
-meilisearch-mcp-server/
+meilisearch-ts-mcp/
 ├── .env.example                 # Example environment variables
 ├── package.json                 # Project dependencies and scripts
 ├── tsconfig.json                # TypeScript configuration

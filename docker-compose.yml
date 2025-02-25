@@ -16,11 +16,11 @@ services:
     networks:
       - meilisearch-network
 
-  meilisearch-mcp:
+  meilisearch-ts-mcp:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: meilisearch-mcp
+    container_name: meilisearch-ts-mcp
     environment:
       - MEILISEARCH_HOST=http://meilisearch:7700
       - MEILISEARCH_API_KEY=${MEILI_MASTER_KEY:-masterKey}
