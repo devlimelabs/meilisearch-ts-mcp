@@ -1,0 +1,31 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties:
+      MEILISEARCH_HOST:
+        type: string
+        default: http://localhost:7700
+        description: URL for the Meilisearch instance
+      MEILISEARCH_API_KEY:
+        type: string
+        default: ""
+        description: API key for Meilisearch, if required
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'node',
+      args: ['dist/index.js'],
+      env: {
+        NODE_ENV: 'production',
+        MEILISEARCH_HOST: config.MEILISEARCH_HOST,
+        MEILISEARCH_API_KEY: config.MEILISEARCH_API_KEY
+      }
+    })
+  exampleConfig:
+    MEILISEARCH_HOST: http://localhost:7700
+    MEILISEARCH_API_KEY: your-api-key
